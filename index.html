@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rex Hub Corps.</title>
+    <title>Rex Hub Corps. | Manga & Publishing Hub</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Anime Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Your CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -18,32 +19,40 @@
 <body>
 
     <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top border-bottom border-danger">
         <div class="container">
 
-            <a class="navbar-brand" href="#">Rex Hub Corps.</a>
+            <a class="navbar-brand fw-bold text-uppercase fs-3 tracking-wider text-warning" href="#">
+                <i class="fa-solid fa-fire me-2 text-danger"></i>Rex Hub Corps.
+            </a>
 
-            <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu">
-
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
 
             <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-house me-1"></i> Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-book-open me-1"></i> Manga Library</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-building me-1"></i> About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+    <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope me-1"></i> Contact</a>
+</li>
+
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-danger px-4 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fa-solid fa-user me-1"></i> Login / Sign Up
+                        </button>
                     </li>
 
                 </ul>
@@ -54,20 +63,21 @@
 
 
     <!-- HEADER WITH VIDEO -->
-    <header class="position-relative">
+    <header class="header">
 
-        <video autoplay muted loop class="w-100">
+        <video autoplay muted loop class="header-video">
             <source src="assets/rexhipolito.mp4" type="video/mp4">
         </video>
 
-        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+        <div class="header-overlay"></div>
 
+        <div class="header-text container">
+            <span class="badge bg-danger mb-2 px-3 py-2 text-uppercase tracking-widest">Dying Will Flame Edition</span>
             <h1>Welcome to Rex Hub Corps.</h1>
-
-            <button class="btn btn-primary">
-                Learn More
-            </button>
-
+            <p class="lead text-light">Explore Official Manga Works, Original Series, & Executive Insights</p>
+            <a href="#manga-section" class="btn btn-lg btn-warning fw-bold text-dark px-4 shadow">
+                <i class="fa-solid fa-fire me-2"></i> Read Featured Manga
+            </a>
         </div>
 
     </header>
@@ -76,90 +86,174 @@
     <!-- MAIN CONTENT -->
     <main class="container my-5">
 
-        <div class="row">
-
-            <!-- ABOUT COMPANY -->
-            <section class="col-md-6 mb-4">
-
-                <div class="card shadow">
-
-                    <div class="card-body">
-
-                        <h2 class="card-title">About Company</h2>
-
-                        <p class="card-text">
-                            I am the CEO of the new company named Rex Hub
-                            Corporation. Firstly, I would like to commend you
-                            for visiting our business website.
-                        </p>
-
-                    </div>
-
+        <!-- COMPANY BRIEF & CEO PROFILE -->
+        <section class="p-4 mb-5 border border-danger rounded shadow-lg bg-dark text-white">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="text-warning fw-bold mb-3"><i class="fa-solid fa-crown me-2"></i> Message From The CEO</h2>
+                    <p class="fs-5 leading-relaxed">
+                        I am the CEO of <strong>Rex Hub Corporation</strong>. Welcome to our official manga publication portal! Here, we blend creative storytelling, high-octane mangaka artistry, and cutting-edge web technology to bring you unforgettable chapters.
+                    </p>
                 </div>
-
-            </section>
-
-
-            <!-- MY SKILLS -->
-            <section class="col-md-6 mb-4">
-
-                <div class="card shadow">
-
-                    <div class="card-body">
-
-                        <h2 class="card-title">My Skills</h2>
-
-                        <ul class="list-group">
-
-                            <li class="list-group-item">Reading</li>
-                            <li class="list-group-item">Programmer</li>
-                            <li class="list-group-item">Web Designer</li>
-                            <li class="list-group-item">Mangaka Artist</li>
-
+                <div class="col-lg-4 text-center mt-3 mt-lg-0">
+                    <div class="card bg-black border-warning text-white p-3">
+                        <h4 class="text-warning mb-2"><i class="fa-solid fa-pen-nib me-2"></i> CEO Specializations</h4>
+                        <ul class="list-unstyled text-start mb-0">
+                            <li class="py-1"><i class="fa-solid fa-check text-danger me-2"></i> Lead Mangaka Artist</li>
+                            <li class="py-1"><i class="fa-solid fa-check text-danger me-2"></i> Full-Stack Web Developer</li>
+                            <li class="py-1"><i class="fa-solid fa-check text-danger me-2"></i> Story & Script Architect</li>
                         </ul>
-
                     </div>
-
                 </div>
-
-            </section>
-
-        </div>
+            </div>
+        </section>
 
 
-        <!-- QUICK LINKS -->
-        <aside class="card shadow">
-
-            <div class="card-body">
-
-                <h3 class="card-title">Quick Links</h3>
-
-                <p class="card-text">
-                    Extra information goes here.
-                </p>
-
+        <!-- MANGA RELEASE GRID SECTION -->
+        <div id="manga-section" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-warning pb-2">
+                <h2 class="text-white fw-bold m-0"><i class="fa-solid fa-fire-flame-curved me-2 text-danger"></i> Trending & Latest Releases</h2>
+                <span class="badge bg-warning text-dark fs-6">Updated Today</span>
             </div>
 
+            <div class="row g-4">
+
+                <!-- Manga Card 1 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card manga-card border-secondary bg-black text-white h-100">
+                        <div class="manga-cover-wrapper position-relative overflow-hidden">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2 z-2">HOT</span>
+                            
+                            <img src="images/hitmanreborn.png" class="w-100 h-100 object-fit-cover" alt="Vongola Legacy Cover">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-warning fw-bold mb-1">Katekyo Hitman Reborn</h5>
+                                <p class="small text-muted mb-2">Genre: Action / Shonen / Comedy</p>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-outline-danger w-100 mt-2">Read Ch. 104</a>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Manga Card 2 -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="card manga-card border-secondary bg-black text-white h-100">
+        <div class="manga-cover-wrapper position-relative overflow-hidden">
+            <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2 z-2">NEW</span>
+            
+        
+            <img src="images/naruto.jpg" class="w-100 h-100 object-fit-cover" alt="Naruto 2002">
+            
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+                <h5 class="card-title text-warning fw-bold mb-1">Naruto 2002</h5>
+                <p class="small text-muted mb-2">Genre: Shonen / Comedy</p>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-danger w-100 mt-2">Read Ch. 12</a>
+        </div>
+    </div>
+</div>
+
+                <!-- Manga Card 3 -->
+                <div class="col-6 col-md-4 col-lg-3">
+    <div class="card manga-card border-secondary bg-black text-white h-100">
+        <div class="manga-cover-wrapper position-relative overflow-hidden">
+            <span class="badge bg-success position-absolute top-0 start-0 m-2 z-2">FINISHED</span>
+            
+            <!-- REPLACED PLACEHOLDER WITH IMAGE TAG BELOW -->
+            <img src="images/luffy.jpg" class="w-100 h-100 object-fit-cover" alt="One Piece">
+            
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+                <h5 class="card-title text-warning fw-bold mb-1">One Piece</h5>
+                <p class="small text-muted mb-2">Genre: Shonen / Adventure</p>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-danger w-100 mt-2">Read Ch. 1</a>
+        </div>
+    </div>
+</div>
+
+                <!-- Manga Card 4 -->
+                <div class="col-6 col-md-4 col-lg-3">
+    <div class="card manga-card border-secondary bg-black text-white h-100">
+        <div class="manga-cover-wrapper position-relative overflow-hidden">
+            <span class="badge bg-info position-absolute top-0 start-0 m-2 z-2">UPCOMING</span>
+            
+            <!-- REPLACED PLACEHOLDER WITH IMAGE TAG BELOW -->
+            <img src="images/dragonball.png" class="w-100 h-100 object-fit-cover" alt="Dragon Ball Z">
+            
+        </div>
+        <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+                <h5 class="card-title text-warning fw-bold mb-1">Dragon Ball Z</h5>
+                <p class="small text-muted mb-2">Genre: Shonen / Adventure</p>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-danger w-100 mt-2">Read Ch. 1</a>
+        </div>
+    </div>
+</div>
+
+        <!-- QUICK LINKS / ANNOUNCEMENTS -->
+        <aside class="bg-black text-white p-4 rounded border border-warning shadow">
+            <h3 class="text-warning fw-bold mb-3"><i class="fa-solid fa-bullhorn me-2"></i> Corporation Bulletin & Quick Links</h3>
+            <p class="mb-2">
+                Stay updated on weekly chapter releases, behind-the-scenes artwork drafts, and corporate tech developments from Rex Hub Corps.
+            </p>
+            <div class="d-flex gap-2 flex-wrap">
+                <a href="#" class="btn btn-sm btn-outline-warning">Discord Community</a>
+                <a href="#" class="btn btn-sm btn-outline-warning">Submission Portal</a>
+                <a href="#" class="btn btn-sm btn-outline-warning">Release Schedule</a>
+            </div>
         </aside>
 
     </main>
 
 
+    <!-- LOGIN / REGISTER MODAL -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-danger">
+                <div class="modal-header border-danger">
+                    <h5 class="modal-title text-warning fw-bold"><i class="fa-solid fa-user-shield me-2"></i> Rex Hub Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email or Username</label>
+                            <input type="text" class="form-control bg-black text-white border-secondary" placeholder="Enter username">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control bg-black text-white border-secondary" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100 fw-bold">Login to Read</button>
+                    </form>
+                </div>
+                <div class="modal-footer border-secondary justify-content-center">
+                    <small class="text-muted">Don't have an account? <a href="#" class="text-warning">Register Now</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center p-3">
-
-        <p class="mb-0">
-            &copy; 2026 Rex Hub Corporation
-        </p>
-
+    <footer class="bg-black text-white border-top border-danger text-center p-4">
+        <p class="mb-1 text-warning fw-bold">&copy; 2026 Rex Hub Corporation. All Rights Reserved.</p>
+        <p class="small text-muted mb-0">Powered by Flame Engine & Hitman Reborn Aesthetics.</p>
     </footer>
 
 
     <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Your JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
